@@ -1,3 +1,4 @@
+// // Targeting html elements by id and class
 const locationInputEl = document.getElementById("locationInput");
 const button = document.getElementById("submit");
 // Storing Api Keys in const
