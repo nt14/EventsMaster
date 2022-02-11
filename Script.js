@@ -9,6 +9,8 @@ const openWeatherAPIKey = "86cf18e05a581bc89bba25b5d33cbc10";
 let Today = moment().format("YYYY-MM-DD");
 // Function to get events from ticket masters API, and then dynamically displaying data using cards. Function serves as a search handler.
 function searchHandler(e) {
+  // Once the search button is used, the video will be replaced with event and weather content
+  video.remove();
   fetch(
     "https://app.ticketmaster.com/discovery/v2/events.json?apikey=" +
       ticketMasterAPIKey +
