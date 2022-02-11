@@ -72,6 +72,21 @@ function searchHandler(e) {
       weatherObject.weather = data.weather[0].main;
       weatherObject.weatherDescription = data.weather[0].description;
       weatherObject.weatherIcon = data.weather[0].icon;
+      // Displaying weather data using parameters from API on html in a card
+      weatherContainer.innerHTML += ` <div class="card mt-4">
+      <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title">${weatherObject.name}</p>
+      <p class="subtitle">${weatherObject.temp}°C
+      </p>
+      <p class="subtitle">${weatherObject.weather}</p>
+        <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png">
+    </article>
+  </div>
+ 
+     
+  </div>`;
+    });
 
 // Search button event listener to run function search handler
 button.addEventListener("click", searchHandler);
