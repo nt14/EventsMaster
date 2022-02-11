@@ -4,6 +4,8 @@ const button = document.getElementById("submit");
 // Storing Api Keys in const
 const ticketMasterAPIKey = "vALoXTDCwMtpJAXLFXIA2X2UcOi3G0Pb";
 const openWeatherAPIKey = "86cf18e05a581bc89bba25b5d33cbc10";
+// Retreiving then storing live date from moment js to specify the events displayed to be for on the day. Using the variable 'Today' as a paremeter in teh feth call to get events data.
+let Today = moment().format("YYYY-MM-DD");
 // Function to get events from ticket masters API, and then dynamically displaying data using cards. Function serves as a search handler.
 function searchHandler(e) {
   fetch(
