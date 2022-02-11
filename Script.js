@@ -9,14 +9,21 @@ let video = document.querySelector("video");
 const ticketMasterAPIKey = "vALoXTDCwMtpJAXLFXIA2X2UcOi3G0Pb";
 const openWeatherAPIKey = "86cf18e05a581bc89bba25b5d33cbc10";
 var array = [];
+// Save array in local storage
+
 // Retreiving then storing live date from moment js to specify the events displayed to be for on the day. Using the variable 'Today' as a paremeter in teh feth call to get events data.
 let Today = moment().format("YYYY-MM-DD");
+
+// Save searched events into local storage
+
 // Function to get events from ticket masters API, and then dynamically displaying data using cards. Function serves as a search handler.
 function searchHandler(e) {
   // Once the search button is used, the video will be replaced with event and weather content
   video.remove();
+
   // Clearing event data on page when a new location is searched
   eventContainer.innerHTML = "";
+  
   fetch(
     "https://app.ticketmaster.com/discovery/v2/events.json?apikey=" +
       ticketMasterAPIKey +
@@ -59,8 +66,10 @@ function searchHandler(e) {
     </div>`;
       });
     });
+
   // Clearing weather data when new location is searched
   weatherContainer.innerHTML = "";
+
   // Fetching weather data
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${locationInputEl.value},gb&appid=${openWeatherAPIKey}&units=metric`
@@ -75,6 +84,8 @@ function searchHandler(e) {
       weatherObject.weather = data.weather[0].main;
       weatherObject.weatherDescription = data.weather[0].description;
       weatherObject.weatherIcon = data.weather[0].icon;
+      // weather.push(weatherObject);
+
       // Displaying weather data using parameters from API on html in a card
       weatherContainer.innerHTML += ` <div class="card mt-4">
       <div class="tile is-parent">
@@ -100,6 +111,7 @@ function searchHandler(e) {
   localStorage.setItem("array", JSON.stringify(array));
   var retrievedHistory = localStorage.getItem("array");
 }
+
 
 // Search button event listener to run function search handler
 button.addEventListener("click", searchHandler);

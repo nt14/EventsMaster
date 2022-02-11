@@ -30,12 +30,17 @@ What we intend to add in the near future?
 3. Provide a booking link so when clicked on the user is able to be redirected to a booking page, so that they’re able to book and pay for the events displayed.
 4. User interface can be more polished using appropriate styling, such as smaller cards and images.
 To access this project the following links are provided:
+
 To access Github Repository
-1.
+1. https://github.com/nt14/EventsMaster
+
 To access Application deployed at live URL
-2.
+2. https://nt14.github.io/EventsMaster/
+
 To access presentation
-## Presentation [project presentation]()
+## Presentation [project presentation]
+(https://docs.google.com/presentation/d/11HMQ9BvFYsP3_FyfEejZvos8otpLRJLl/edit?usp=sharing&ouid=113958077381292450925&rtpof=true&sd=true
+)
 Screenshot changes made can be found in images
 Screenshot of deployed application
 
@@ -77,3 +82,7 @@ References
 8. https://bulma.io/
 9. https://api.jquery.com/
 10. https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+Collaboration
+[Farhiya Mahamud] -https://github.com/Farhiya1/EventsMasterUK
+[Samira Hirsi] - https://github.com/samira0101/Event-Masters-UK
